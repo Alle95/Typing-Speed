@@ -1,0 +1,32 @@
+.div1 {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 300%;
+    border-radius: 50%;
+    align-content: center;
+    margin: auto;
+}
+
+.div2 {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 300%;
+    border-radius: 50%;
+}
+
+.card-subtitle{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 300%;
+}
+
+.card-body-text {
+    border: 2px solid black;
+    width: 1250px;
+    height: 400px;
+    text-align: center;
+    font-size: 220%;
+}
