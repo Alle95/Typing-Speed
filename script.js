@@ -68,7 +68,7 @@ let time = 60;
 function changeTime() {
     --time;
     timer.innerHTML = time;
-    if (time == 50) {
+    if (time == 0) {
         document.removeEventListener("keyup", apearLetter);
         clearInterval(setTimer);
         score.innerHTML = 'You wrote ' +totalCorrectWords + ' correct words!';
