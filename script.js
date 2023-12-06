@@ -44,18 +44,34 @@ function createText() {
 }
 
 let letterId = 1;
+let totalCorrectWords = 0;
+let correctLetter = true;
 
 function apearLetter(event) {
     if (event.key == document.getElementById(letterId).textContent) {
         document.getElementById(letterId).style="color:greenyellow";
     } else {
         document.getElementById(letterId).style="color:red";
+        correctLetter = false;
+    }
+    if(document.getElementById(letterId).textContent == ' ') {
+        if(correctLetter == true) {
+            ++totalCorrectWords;
+        }
+        correctLetter = true;
     }
     ++letterId;
 }
+
 let time = 60;
 
 function changeTime() {
---time;
-timer.innerHTML = time;
+    --time;
+    timer.innerHTML = time;
+    if (time == 50) {
+        document.removeEventListener("keyup", apearLetter);
+        clearInterval(setTimer);
+        score.innerHTML = 'You wrote ' +totalCorrectWords + ' correct words!';
+        document.getElementById("reload").style.display = "block";
+    }
 }
