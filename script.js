@@ -1,18 +1,18 @@
-let words = ["car", "ball","against","there","story","could","something",
-"wind","door","star","side","think","vocabulary","score","confused","illusion",
-"smartest","world","dictionary","looking","faster","learning",
-"research","teacher","moment","education","student","country","mother","money",
-"story","fact","month","book","business","issue","side",
-"kind","head","house","service","friend","father","power","member",
-"law","community","body","information","level","office","health",
-"reason","air","girl","boy","kid","women","men","end"];
+let words = ["car", "ball", "against", "there", "story", "could", "something",
+"wind", "door", "star", "side", "think", "vocabulary", "score", "confused", "illusion",
+"smartest", "world", "dictionary", "looking", "faster", "learning",
+"research", "teacher", "moment", "education", "student", "country", "mother", "money",
+"story", "fact", "month", "book", "business", "issue", "side",
+"kind", "head", "house", "service", "friend", "father", "power", "member",
+"law", "community", "body", "information", "level", "office", "health",
+"reason", "air", "girl", "boy", "kid", "women", "men", "end"];
 let setTimer;
 
 function shuffle() {
     let currentIndex = words.length,  randomIndex;
     while (currentIndex > 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
+    --currentIndex;
     [words[currentIndex], words[randomIndex]] = [
         words[randomIndex], words[currentIndex]];
   }
@@ -71,7 +71,7 @@ function changeTime() {
     if (time == 0) {
         document.removeEventListener("keyup", apearLetter);
         clearInterval(setTimer);
-        score.innerHTML = 'You wrote ' +totalCorrectWords + ' correct words!';
+        score.innerHTML = 'You wrote ' + totalCorrectWords + ' correct words!';
         document.getElementById("reload").style.display = "block";
     }
 }
